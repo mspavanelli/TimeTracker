@@ -1,13 +1,22 @@
 <template>
   <aside class="col-span-1 rounded-2xl bg-white p-8 shadow">
-    <h1>Timer <strong>Tracker</strong></h1>
+    <router-link to="/dashboard">
+      <h1>
+        Timer
+        <strong>Tracker</strong>
+      </h1>
+    </router-link>
 
     <ul>
       <li>
-        <router-link to="/" active-class="active">Tasks</router-link>
+        <router-link to="/dashboard/tasks" active-class="active"
+          >Tasks</router-link
+        >
       </li>
       <li>
-        <router-link to="/projects" active-class="active">Projects</router-link>
+        <router-link to="/dashboard/projects" active-class="active"
+          >Projects</router-link
+        >
       </li>
     </ul>
   </aside>
@@ -23,6 +32,6 @@ export default defineComponent({
 
 <style>
 .active {
-  border: 2px solid red;
+  @apply font-bold;
 }
 </style>

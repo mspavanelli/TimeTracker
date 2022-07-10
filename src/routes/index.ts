@@ -1,18 +1,28 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router"
 
-import TasksPage from "@/pages/Tasks.vue"
-import ProjectsPage from "@/pages/Projects.vue"
+import TasksPage from "@/pages/dashboard/Tasks.vue"
+import ProjectsPage from "@/pages/dashboard/Projects.vue"
 
 const routes: RouteRecordRaw[] = [
   {
     path: "/",
-    name: "Tasks",
-    component: TasksPage,
+    redirect: "/dashboard",
   },
   {
-    path: "/projects",
-    name: "Projects",
-    component: ProjectsPage,
+    path: "/dashboard",
+    redirect: "/dashboard/tasks",
+    children: [
+      {
+        path: "/dashboard/tasks",
+        name: "Tasks",
+        component: TasksPage,
+      },
+      {
+        path: "/dashboard/projects",
+        name: "Projects",
+        component: ProjectsPage,
+      },
+    ],
   },
 ]
 
