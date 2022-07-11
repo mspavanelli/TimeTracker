@@ -15,12 +15,12 @@ const routes: RouteRecordRaw[] = [
     redirect: "/dashboard/tasks",
     children: [
       {
-        path: "/dashboard/tasks",
+        path: "tasks",
         name: "Tasks",
         component: TasksPage,
       },
       {
-        path: "/dashboard/projects",
+        path: "projects",
         name: "Projects",
         component: ProjectsPage,
       },

@@ -1,61 +1,18 @@
 <template>
   <main class="col-span-3 grid h-8 gap-8">
-    <form @submit.prevent="submitForm">
-      <input type="text" v-model="name" />
-      <input type="submit" value="Create" />
-    </form>
-
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Project</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr v-for="project in projects" :key="project.id">
-          <td>{{ project.id }}</td>
-          <td>{{ project.name }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <Form />
+    <ProjectsList />
   </main>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from "vue"
-import { useStore } from "vuex"
+import { defineComponent } from "vue"
 
-import IProject from "@/types/IProject"
+import Form from "@/components/views/Projects/Form.vue"
+import ProjectsList from "@/components/views/Projects/ProjectsList.vue"
 
 export default defineComponent({
   name: "ProjectsPage",
-  components: {},
-  data() {
-    return {
-      name: "",
-    }
-  },
-  methods: {
-    submitForm() {
-      const project: IProject = {
-        id: new Date().toISOString(),
-        name: this.name,
-      }
-
-      this.projects = [...this.projects, project]
-      this.name = ""
-    },
-  },
-  setup() {
-    const store = useStore()
-
-    const projects = computed(() => store.state.projects)
-
-    return {
-      projects,
-    }
-  },
+  components: { ProjectsList, Form },
 })
 </script>
