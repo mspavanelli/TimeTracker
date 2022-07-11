@@ -1,7 +1,9 @@
 <template>
-  <div class="grid h-screen grid-cols-4 gap-8 bg-white p-8">
+  <div class="grid h-screen grid-cols-4 gap-8 bg-white pt-10 pl-10">
     <AsidePanel />
-    <!-- <slot /> -->
+    <main class="col-span-3 rounded-tl-3xl bg-stone-50 py-20 px-12">
+      <slot />
+    </main>
   </div>
 </template>
 

@@ -1,5 +1,12 @@
 <template>
-  <span class="font-mono">{{ formattedTimer }}</span>
+  <div
+    class="flex h-40 w-56 flex-col justify-between rounded-3xl bg-white p-8 shadow"
+  >
+    <h3>Task Name</h3>
+    <p class="text-3xl font-bold">
+      {{ formattedTimer }}
+    </p>
+  </div>
 </template>
 
 <script lang="ts">

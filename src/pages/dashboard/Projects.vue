@@ -1,5 +1,5 @@
 <template>
-  <main class="col-span-3 grid h-8 gap-8">
+  <main class="grid h-8 gap-8">
     <Form />
     <ProjectsList />
   </main>
