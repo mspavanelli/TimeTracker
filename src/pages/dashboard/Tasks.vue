@@ -1,7 +1,8 @@
 <template>
   <main class="col-span-3 grid h-8 gap-8">
-    <Timer @finishTimer="handleFinishTimer" />
-    <TaskList :tasks="taskList" />
+    <Calender />
+    <!-- <Timer @finishTimer="handleFinishTimer" /> -->
+    <!-- <TaskList :tasks="taskList" /> -->
   </main>
 </template>
 
@@ -10,12 +11,14 @@ import { defineComponent } from "vue"
 
 import Timer from "@/components/widgets/molecules/Timer.vue"
 import TaskList from "@/components/widgets/organisms/TaskList.vue"
+import Calender from "@/components/widgets/molecules/Calender.vue"
 
 export default defineComponent({
   name: "TasksPage",
   components: {
     Timer,
     TaskList,
+    Calender,
   },
   data() {
     return {
