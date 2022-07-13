@@ -20,28 +20,8 @@ import TimerControl from "@/components/widgets/molecules/TimerControl.vue"
 import TaskInput from "../../components/widgets/molecules/TaskInput.vue"
 export default defineComponent({
   name: "TasksPage",
-    Calender,
-    TimerControl,
-    TaskInput,
-  },
-  data() {
-    return {
-      taskList: [
-        {
-          title: "Foo",
-          duration: 10,
-        },
-        {
-          title: "Tickling girl",
-          duration: 1400,
-        },
-      ],
-    }
-  },
-  methods: {
-    handleFinishTimer(task) {
-      this.taskList = [task, ...this.taskList]
-    },
-  },
+  Calender,
+  TimerControl,
+  TaskInput,
 })
 </script>

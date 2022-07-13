@@ -26,6 +26,7 @@ export default defineComponent({
     const store = useStore()
     const projects = computed(() => store.state.projects)
 
+    console.log({ projects })
     return { projects }
   },
 })
