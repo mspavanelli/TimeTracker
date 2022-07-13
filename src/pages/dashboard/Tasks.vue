@@ -18,11 +18,8 @@ import TaskList from "@/components/widgets/organisms/TaskList.vue"
 import Calender from "@/components/widgets/molecules/Calender.vue"
 import TimerControl from "@/components/widgets/molecules/TimerControl.vue"
 import TaskInput from "../../components/widgets/molecules/TaskInput.vue"
-
 export default defineComponent({
   name: "TasksPage",
-  components: {
-    TaskList,
     Calender,
     TimerControl,
     TaskInput,
